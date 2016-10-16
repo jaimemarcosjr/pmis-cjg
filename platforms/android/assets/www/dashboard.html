@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <script type="text/javascript" src="cordova.js"></script>  
+        <!-- load the json2 library (required for jstorage use) -->
+        <script src="js/json2.js"></script>
+
+        <!-- load the jquery library -->
+        <script type="text/javascript" src="js/jquery.js"></script>
+
+        <!-- load the jstorage library -->
+        <script src="js/jstorage.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script>
+        <script type="text/javascript" src="js/dashboard.js"></script>
+        
+        <title>Hello World</title>
+    </head>
+    <body>
+        <div data-role="header" data-add-back-btn="true"> 
+            <h1>CJG Digital Marketing</h1>
+            <a href="#" class="ui-btn ui-btn-right" id="logout" >Logout</a>
+        </div> 
+       
+        <div data-role="page" id="page1">
+            <div role="main" class="ui-content  ">
+                <ul id="profile" >
+
+                </ul>
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        
+        <div data-role="page" id="view-conversation">
+
+            <div class="display-message" style="margin-bottom: 120.375px;" >
+                <a href="" class="ui-btn" onclick="viewConvo(this);" id="getOtherMessage">Other Messages</a>
+                <div id="message-data"></div>
+			
+			</div>
+			<!-- /display message -->
+
+			<!-- send message -->
+			<div id="send-message" style="position: fixed;"  data-ajax="false" class="fixed-bottom send-message" >
+				<!-- store conversation_id, user_from, user_to so that we can send send this values to post_message_ajax.php -->
+				<div class="form-group">
+
+					<textarea class="form-control" id="message" name="message" style="background-color: honeydew;" placeholder="Enter Your Message" required></textarea>
+				</div>
+				<button class="btn btn-primary" style="background-color: lightgray;" >Reply</button> 
+				<span id="error"></span>
+			</div>
+        </div>
+                
+    </body>
+</html>

@@ -1,0 +1,9 @@
+[1016/181938:ERROR:file_io.cc(41)] write: The pipe is being closed. (0xE8)
+[1016/194220:ERROR:process_info.cc(608)] range at 0xfffde000, size 0x230 fully unreadable
+[1016/194241:ERROR:process_info.cc(608)] range at 0xfffdd000, size 0xf84 fully unreadable
+[1016/194241:ERROR:process_info.cc(608)] range at 0xfffda000, size 0xf84 fully unreadable
+[1016/194241:ERROR:process_info.cc(608)] range at 0xfffd7000, size 0xf84 fully unreadable
+[1016/194241:ERROR:process_info.cc(608)] range at 0xfffaf000, size 0xf84 fully unreadable
+[1016/194241:ERROR:process_info.cc(608)] range at 0xfffac000, size 0xf84 fully unreadable
+[1016/194241:ERROR:process_info.cc(608)] range at 0xfffa9000, size 0xf84 fully unreadable
+[1016/194317:ERROR:http_transport_win.cc(50)] WinHttpSendRequest: A security error occurred  (0x2F8F)
