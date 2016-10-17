@@ -46,11 +46,11 @@
         <title>Hello World</title>
     </head>
     <body>
-        <div data-role="header" data-add-back-btn="true"> 
+        <div data-role="header" class="navbar navbar-default navbar-fixed-top" data-add-back-btn="true"> 
             <h1>CJG Digital Marketing</h1>
             <a href="#" class="ui-btn ui-btn-right" id="logout" >Logout</a>
         </div> 
-       
+        <div style="margin-top: 42.375px;"></div>
         <div data-role="page" id="page1">
             <div role="main" class="ui-content  ">
                 <ul id="profile" >
@@ -70,7 +70,7 @@
 			<!-- /display message -->
 
 			<!-- send message -->
-			<div id="send-message" style="position: fixed;"  data-ajax="false" class="fixed-bottom send-message" >
+			<div id="send-message" style="position: fixed;"  data-ajax="false" class="fixed-bottom" >
 				<!-- store conversation_id, user_from, user_to so that we can send send this values to post_message_ajax.php -->
 				<div class="form-group">
 
